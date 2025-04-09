@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.contato.view.FormularioContatoController">
+    <children>
+        <VBox spacing="10" alignment="TOP_LEFT" layoutX="20.0" layoutY="20.0" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
+            <children>
+                <Label text="Formulário de Contato" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+                <HBox spacing="10">
+                    <children>
+                        <VBox>
+                            <children>
+                                <Label text="Nome:" />
+                                <TextField fx:id="txtNome" promptText="Digite seu nome"/>
+                            </children>
+                        </VBox>
+                        <VBox>
+                            <children>
+                                <Label text="Sobrenome:" />
+                                <TextField fx:id="txtSobrenome" promptText="Digite seu sobrenome"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <Label text="Email:" />
+                <TextField fx:id="txtEmail" promptText="Digite seu email"/>
+
+                <Label text="Telefone:" />
+                <TextField fx:id="txtTelefone" promptText="Digite seu telefone"/>
+
+                <Label text="Assunto:" />
+                <TextField fx:id="txtAssunto" promptText="Assunto da mensagem"/>
+
+                <Label text="Mensagem:" />
+                <TextArea fx:id="txtMensagem" promptText="Digite sua mensagem" prefRowCount="5"/>
+
+                <Button text="Enviar" onAction="#onEnviarClick"/>
+                <Label fx:id="lblStatus" style="-fx-text-fill: green;"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
